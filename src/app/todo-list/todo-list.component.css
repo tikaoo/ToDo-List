@@ -1,0 +1,66 @@
+.container{
+    background-color: white;
+    width: 360px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px 2px gray;
+    cursor: pointer;
+    margin-top: -70px;
+    
+    
+}
+input{
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 20px;
+    width: 130px;
+    height: 35px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-right: 5px;
+    
+}
+.add {
+    height: 36px;
+    width: 50px;
+    border-radius: 3px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+        
+}
+.lixo:hover{
+      cursor: pointer;
+    
+}
+ul{
+    display: flex;
+    align-items: center;
+    margin: 5px 10px 5px 10px;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+    background-color: #000000;
+    color: white;
+    margin-bottom: 5px;
+    margin-right: 5px;
+     
+}
+
+ul li:hover {
+  background: rgb(221, 51, 51);
+  cursor: pointer;
+}
+.data{
+    width: 150px;
+}
+.texto{
+    width:100%
+
+}
+.tag{
+    text-align: center;
+    cursor: default;
+}

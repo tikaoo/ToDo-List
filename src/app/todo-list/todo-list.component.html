@@ -1,0 +1,27 @@
+<div class="container">
+  <input type="text" placeholder="Adicionar Tarefa" #inputTarefa />
+  <input type="date" #inputDate />
+  <button
+    class="add"
+    (click)="
+      adicionar(inputTarefa.value, inputDate.value);
+      inputTarefa.value = '';
+      inputDate.value = ''
+    "
+  >
+    +
+  </button>
+  <ul *ngFor="let item of lista">
+    <li class="texto">{{ item.nome }}</li>
+    <li class="data">{{ item.data | date: "dd/MM/yy" }}</li>
+    <button (click)="deletar(item.id)" class="lixo">
+      <i class="fa fa-trash"></i>
+    </button>
+  </ul>
+  <p class="tag">
+    Você tem <b>{{ lista.length }}</b> para completar.
+    <button appStyle (click)="eventoPersonalizado()" class="Limpar">
+      Limpar Tudo
+    </button>
+  </p>
+</div>
