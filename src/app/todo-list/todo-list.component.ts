@@ -28,6 +28,7 @@ export class TodoListComponent implements OnInit {
   }
   deletar(id:number){
     this.lista.splice(this.lista.indexOf(id))
+    this.mensagem2()
     this.salva()
   }
 
@@ -40,10 +41,16 @@ export class TodoListComponent implements OnInit {
   
   eventoPersonalizado():void{
     this.evento.emit(this.lista=[]=[])
+    this.mensagem()
+    this.salva()
   } 
-    
-  
-  }
- 
+  constructor(private msg: MatSnackBar) {}
+
+  mensagem():void {
+    this.msg.open('Você Exluiu todos os itens','Fechar');
+    }
+    mensagem2():void {
+      this.msg.open('Você Exluiu um item','Fechar');
+}}
 
 
